@@ -1,0 +1,68 @@
+# Database Configuration
+DATABASE_URL=postgresql://social_user:social_password@postgres:5432/social_network
+DATABASE_HOST=postgres
+DATABASE_PORT=5432
+DATABASE_NAME=social_network
+DATABASE_USER=social_user
+DATABASE_PASSWORD=social_password
+
+# Redis Configuration
+REDIS_URL=redis://redis:6379
+REDIS_HOST=redis
+REDIS_PORT=6379
+
+# Rust Backend Configuration
+RUST_API_HOST=0.0.0.0
+RUST_API_PORT=8000
+RUST_LOG=info
+
+# Python Backend Configuration
+PYTHON_API_HOST=0.0.0.0
+PYTHON_API_PORT=8001
+PYTHON_LOG_LEVEL=INFO
+
+# JWT Configuration
+JWT_SECRET=change-this-to-a-secure-random-string-in-production
+JWT_EXPIRATION_HOURS=24
+JWT_REFRESH_EXPIRATION_DAYS=30
+
+# CORS Configuration
+CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8080
+CORS_ALLOWED_METHODS=GET,POST,PUT,DELETE,PATCH,OPTIONS
+CORS_ALLOWED_HEADERS=Content-Type,Authorization
+
+# File Upload Configuration
+MAX_FILE_SIZE=10485760
+UPLOAD_DIR=./uploads
+ALLOWED_IMAGE_TYPES=image/jpeg,image/png,image/gif,image/webp
+ALLOWED_VIDEO_TYPES=video/mp4,video/webm,video/quicktime
+
+# Frontend Configuration
+VITE_API_URL=http://localhost:8000/api/v1
+VITE_PYTHON_API_URL=http://localhost:8001/api/v1
+VITE_WS_URL=ws://localhost:8000/ws
+
+# Email Configuration (Optional)
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USER=noreply@example.com
+SMTP_PASSWORD=your-smtp-password
+SMTP_FROM=noreply@example.com
+
+# AWS S3 Configuration (Optional - for production file storage)
+AWS_ACCESS_KEY_ID=your-aws-access-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret-key
+AWS_REGION=us-east-1
+AWS_S3_BUCKET=social-network-media
+
+# Celery Configuration
+CELERY_BROKER_URL=redis://redis:6379/0
+CELERY_RESULT_BACKEND=redis://redis:6379/0
+
+# Rate Limiting
+RATE_LIMIT_REQUESTS_PER_MINUTE=60
+RATE_LIMIT_REQUESTS_PER_HOUR=1000
+
+# Production Settings (Change in production)
+NODE_ENV=development
+DEBUG=true
