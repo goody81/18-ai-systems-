@@ -1,0 +1,164 @@
+# 18PlusAi Studios - Environment Configuration Example
+# Copy this file to .env and update the values with your configuration
+
+# =============================================================================
+# DATABASE CONFIGURATION
+# =============================================================================
+DATABASE_URL=postgresql://user:password@localhost:5432/18plusai_db
+DATABASE_POOL_SIZE=20
+DATABASE_MAX_CONN=100
+
+# =============================================================================
+# REDIS CONFIGURATION
+# =============================================================================
+REDIS_URL=redis://localhost:6379
+REDIS_POOL_SIZE=20
+REDIS_PASSWORD=
+
+# =============================================================================
+# AUTHENTICATION & SECURITY
+# =============================================================================
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+JWT_EXPIRY=3600
+REFRESH_TOKEN_EXPIRY=604800
+BCRYPT_ROUNDS=12
+
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-supabase-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
+
+# =============================================================================
+# PAYMENT PROCESSING
+# =============================================================================
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
+STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
+
+# =============================================================================
+# AI/ML SERVICES
+# =============================================================================
+OPENAI_API_KEY=sk-your-openai-api-key
+MINIMAX_API_KEY=your-minimax-api-key
+ANTHROPIC_API_KEY=sk-ant-your-anthropic-key
+
+# =============================================================================
+# EXTERNAL SERVICES
+# =============================================================================
+SMTP_HOST=smtp.yourmail.com
+SMTP_PORT=587
+SMTP_USERNAME=noreply@18plusai.com
+SMTP_PASSWORD=your-email-password
+SMTP_FROM=18PlusAi Studios <noreply@18plusai.com>
+
+# AWS S3 (for file storage)
+AWS_ACCESS_KEY_ID=your-aws-access-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret-key
+AWS_REGION=us-east-1
+AWS_S3_BUCKET=18plusai-storage
+
+# =============================================================================
+# APPLICATION CONFIGURATION
+# =============================================================================
+APP_ENV=development
+APP_NAME="18PlusAi Studios"
+APP_VERSION=2.0.0
+APP_DEBUG=true
+APP_URL=http://localhost:3000
+API_URL=http://localhost:8080
+
+# =============================================================================
+# SERVER CONFIGURATION
+# =============================================================================
+SERVER_HOST=0.0.0.0
+SERVER_PORT=8080
+WORKERS=auto
+KEEP_ALIVE=5
+
+# =============================================================================
+# RATE LIMITING
+# =============================================================================
+RATE_LIMIT_GLOBAL=100
+RATE_LIMIT_USER=50
+RATE_LIMIT_IP=20
+RATE_LIMIT_BURST=10
+
+# =============================================================================
+# CACHING CONFIGURATION
+# =============================================================================
+CACHE_TTL=300
+CACHE_MAX_SIZE=10000
+CACHE_REDIS_TTL=3600
+
+# =============================================================================
+# MONITORING & LOGGING
+# =============================================================================
+LOG_LEVEL=info
+LOG_FORMAT=json
+ENABLE_METRICS=true
+METRICS_PORT=8081
+
+# Sentry (Error Tracking)
+SENTRY_DSN=your-sentry-dsn
+
+# =============================================================================
+# FRONTEND SPECIFIC
+# =============================================================================
+VITE_API_URL=http://localhost:8080
+VITE_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+VITE_APP_NAME="18PlusAi Studios"
+VITE_APP_VERSION=2.0.0
+
+# =============================================================================
+# DEVELOPMENT CONFIGURATION
+# =============================================================================
+ENABLE_CORS=true
+CORS_ORIGINS=http://localhost:3000,http://localhost:5173
+ENABLE_SWAGGER=true
+SWAGGER_PATH=/docs
+
+# Database seeding
+SEED_DATABASE=false
+SEED_FILE=seeds/initial_data.sql
+
+# =============================================================================
+# PRODUCTION CONFIGURATION
+# =============================================================================
+# SSL_CERT_PATH=/path/to/ssl/cert.pem
+# SSL_KEY_PATH=/path/to/ssl/private.key
+# FORCE_HTTPS=true
+
+# =============================================================================
+# ADVANCED FEATURES
+# =============================================================================
+# Enable/disable features
+FEATURE_AI_RECOMMENDATIONS=true
+FEATURE_FRAUD_DETECTION=true
+FEATURE_REAL_TIME_UPDATES=true
+FEATURE_GRAPHQL=true
+FEATURE_WEBSOCKET=true
+FEATURE_METRICS=true
+
+# AI/ML Configuration
+AI_MODEL_VERSION=v1.0
+FRAUD_DETECTION_THRESHOLD=0.8
+PRICE_OPTIMIZATION_ENABLED=true
+
+# =============================================================================
+# INTERNATIONALIZATION
+# =============================================================================
+DEFAULT_LANGUAGE=en
+SUPPORTED_LANGUAGES=en,es,fr,de,zh,ja,ko
+CURRENCY=USD
+TIMEZONE=UTC
+
+# =============================================================================
+# NOTES
+# =============================================================================
+# - Never commit .env file to version control
+# - Use strong, unique secrets for JWT_SECRET and other keys
+# - Update Stripe keys for production (sk_live_... and pk_live_...)
+# - Configure proper email service for production
+# - Set up proper monitoring and error tracking
+# - Use environment-specific configurations for staging/production
